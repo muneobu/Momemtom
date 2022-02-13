@@ -1,3 +1,5 @@
+"use strict";
+
 const quotes = [
   {
     quote: "The way to get started is to quit talking and begin doing.",
@@ -41,10 +43,12 @@ const quotes = [
     author: "Sheda Savage",
   },
 ];
+const random = quotes[Math.floor(Math.random() * quotes.length)];
+const qSpan = document.querySelector("#quotes");
+const aSpan = document.querySelector("#author");
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
-const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-quote.innerHTML = todaysQuote.quote;
-author.innerHTML = todaysQuote.author;
+function showQoutes() {
+  qSpan.innerHTML = random.quote;
+  aSpan.innerHTML = random.author;
+}
+showQoutes();
