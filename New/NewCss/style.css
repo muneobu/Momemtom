@@ -18,3 +18,10 @@ img {
   left: 0;
   z-index: -1;
 }
+
+#quotes {
+  color: aliceblue;
+}
+#author {
+  color: aliceblue;
+}
